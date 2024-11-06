@@ -19,7 +19,17 @@ By creating the bucket website endpoint, we had the endpoint in which users were
 
 ### DNS
 
+DNS, or Domain Name System, allows for users to easily find web addresses easily through commonly used words or letters. This is much easier than using an IP address, but will require extra steps to setup and link to our current website.
 
+In order to use a domain matching along the lines of (first_name)(last_name).com, we have to use a custom domain name. After creating this custom name, it will then need to access the CloudFront distribution to point to the correct place. We will then need to use AWS Route53 to ensure traffic gets routed correctly, including for both websites including and excluding "www."
+<br><br>
+<img width="600" alt="Screenshot 2024-11-06 at 12 16 09 PM" src="https://github.com/user-attachments/assets/d9d2a42b-427b-41a6-932b-63c5c43d42fd">
+<br><br>
+After creating the domain aelikim.com on Namecheap, we were given multiple custom DNS. Route53 is then needed to route these addresses to the correct place, being the endpoint we had created earlier in our bucket. 
+<br><br>
+<img width="600" alt="Screenshot 2024-11-06 at 1 05 06 PM" src="https://github.com/user-attachments/assets/4ea8d486-19ad-4d75-a250-d3286f23807d">
+<br><br>
+By matching the custom DNS to the correct object, the last step is to link everything together. CloudFront will act to serve content from our origin bucket to these new domains.
 
 ### HTTPS
 
