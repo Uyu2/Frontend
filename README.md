@@ -15,6 +15,21 @@ After uploading the resume to S3 and changing the access to public, the next ste
 <br><br>
 <img width="600" alt="Screenshot 2024-11-06 at 12 14 28 PM" src="https://github.com/user-attachments/assets/07c7a9fa-97db-4a97-abaa-331006f81529">
 <br><br>
-By creating the bucket website endpoint, we had the endpoint in which users were to eventually reach. This by itself is not the complete endpoint, however, since the generated url does not point to a clean website like "aelikim.com," and instead points to the created s3 endpoint. For easy access and better implementation, the website still required a custom domain, and increased security through HTTPS rather than through HTTP.
+By creating the bucket website endpoint, we had the endpoint in which users were to eventually reach. This by itself is not the complete endpoint, however, since the generated url does not point to a clean website like "aelikim.com," and instead points to the created s3 endpoint using HTTP. For easy access and better implementation, the website still required a custom domain, and increased security through HTTPS rather than through HTTP.
+
+### DNS
 
 
+
+### HTTPS
+
+Utilizing HTTPS is critical for ensuring security, as we currently use the HTTP protocol. HTTPS not only encrypts data rather than transmit it using plain text in the case of HTTP, but HTTPS also uses certificate validation. SSL/TLS certificates are used by HTTPS to ensure the website is authentic, which alongside its encryption helps mitigate risk.
+
+To go about using HTTPS, AWS CloudFront and Certificate Manager can be implemented to increase security. AWS Certificate Manager helps with SSL/TLS certificates by automatically renewing certificates and helps manage the certifications. AWS CloudFront helps with security and reliability, both enabling encryption and HTTPS support, but also uses various worldwide locations to cache the website data and deliver faster load times. 
+<br><br>
+<img width="600" alt="Screenshot 2024-11-06 at 12 14 51 PM" src="https://github.com/user-attachments/assets/e7a1319d-af9c-463d-81f0-8eeca0601de8">
+<br><br>
+The picture above shows the alternative domain names after finishing the creation of a new CloudFront distribution. By using the alternative names and SSL certificate, users seeking the website can now use HTTPS as it is enabled for the custom domain name. In order to check that this is running on HTTPS, by viewing the elements of the website and refreshing, the picture below shows that the request is coming from CloudFront.
+<br><br>
+<img width="600" alt="Screenshot 2024-11-06 at 12 15 16 PM" src="https://github.com/user-attachments/assets/2738fe41-7737-4064-bc6e-a4366b81c028">
+<br><br>
