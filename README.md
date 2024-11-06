@@ -29,7 +29,7 @@ After creating the domain aelikim.com on Namecheap, we were given multiple custo
 <br><br>
 <img width="600" alt="Screenshot 2024-11-06 at 1 05 06 PM" src="https://github.com/user-attachments/assets/4ea8d486-19ad-4d75-a250-d3286f23807d">
 <br><br>
-By matching the custom DNS to the correct object, the last step is to link everything together. CloudFront will act to serve content from our origin bucket to these new domains.
+By matching the custom DNS to the correct object, the last step is to link everything together. CloudFront will act to serve content from our origin bucket to these new domains. HTTPS will cover more of AWS CloudFront, the main thing being setting up the alternative names so that our certificate will access the website through HTTPS.
 
 ### HTTPS
 
