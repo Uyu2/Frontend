@@ -29,7 +29,7 @@ To go about using HTTPS, AWS CloudFront and Certificate Manager can be implement
 <br><br>
 <img width="600" alt="Screenshot 2024-11-06 at 12 14 51 PM" src="https://github.com/user-attachments/assets/e7a1319d-af9c-463d-81f0-8eeca0601de8">
 <br><br>
-The picture above shows the alternative domain names after finishing the creation of a new CloudFront distribution. By using the alternative names and SSL certificate, users seeking the website can now use HTTPS as it is enabled for the custom domain name. In order to check that this is running on HTTPS, by viewing the elements of the website and refreshing, the picture below shows that the request is coming from CloudFront.
+The picture above shows the alternative domain names after finishing the creation of a new CloudFront distribution. By using the alternative names and SSL certificate, users seeking the website can now use HTTPS as it is enabled for the custom domain name. In order to check that this is running on HTTPS, by viewing the elements of the website and refreshing, the picture below shows that the response is coming from CloudFront. This means that it is correctly routing through HTTPS since it is responding from the created distribution.
 <br><br>
 <img width="600" alt="Screenshot 2024-11-06 at 12 15 16 PM" src="https://github.com/user-attachments/assets/2738fe41-7737-4064-bc6e-a4366b81c028">
 <br><br>
