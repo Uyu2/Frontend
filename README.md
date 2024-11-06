@@ -15,6 +15,6 @@ After uploading the resume to S3 and changing the access to public, the next ste
 <br><br>
 <img width="600" alt="Screenshot 2024-11-06 at 12 14 28 PM" src="https://github.com/user-attachments/assets/07c7a9fa-97db-4a97-abaa-331006f81529">
 <br><br>
-By creating the bucket website endpoint, we had the endpoint in which users were to eventually reach. This by itself is not the complete endpoint, however, since the generated url does not point to a clean website like "aelikim.com," and instead includes amazon, s3, and regions in the url. For easy access and better implementation, the website still required a custom domain, and increased security through HTTPS rather than through HTTP.
+By creating the bucket website endpoint, we had the endpoint in which users were to eventually reach. This by itself is not the complete endpoint, however, since the generated url does not point to a clean website like "aelikim.com," and instead points to (http://aelikim.com.s3-website-us-east-1.amazonaws.com). For easy access and better implementation, the website still required a custom domain, and increased security through HTTPS rather than through HTTP.
 
 
